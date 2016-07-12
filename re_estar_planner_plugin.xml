@@ -1,0 +1,5 @@
+<library path="lib/libre_estar_lib">
+ <class name="planner/REstar" type="planner::REstar" base_class_type="nav_core::BaseGlobalPlanner">
+   <description>This is RE* global planner plugin by Karthik project.</description>
+ </class>
+</library>
