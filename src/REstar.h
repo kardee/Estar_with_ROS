@@ -89,10 +89,7 @@ namespace planner
 			bool makePlan(const geometry_msgs::PoseStamped& start, 
 		                      const geometry_msgs::PoseStamped& goal, 
 		                      std::vector<geometry_msgs::PoseStamped>& plan);			    
-<<<<<<< HEAD
-=======
-			//void estar_expose();
->>>>>>> 998b91a787fa7e928cf9ee57a5eaff78c12983cb
+
 			~REstar();	
 
 

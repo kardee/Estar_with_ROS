@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*
 /* ROS-ESTAR.
  *
@@ -11,8 +10,6 @@
  *   License (3-Clause BSD) : https://github.com/poftwaresatent/estar2
  * ***/
 
-=======
->>>>>>> 998b91a787fa7e928cf9ee57a5eaff78c12983cb
 #include "REstar.h"
 #include <ros/ros.h>
 #include <pluginlib/class_list_macros.h>
@@ -56,12 +53,9 @@ namespace planner
 		
  			
 			value = 0;
-<<<<<<< HEAD
+
 			estar_init(&estar,width,height);    // calling the initialize function from estar2 library
-=======
-			estar_init(&estar,width,height);
->>>>>>> 998b91a787fa7e928cf9ee57a5eaff78c12983cb
-	        
+			
 			for(int i=0;i<width;++i)
 			{	
 				for(int j=0;j<height;++j)
@@ -69,11 +63,7 @@ namespace planner
 					size_t cost = static_cast<size_t>(costmap_->getCost(i,j));
 					if(cost == 0.0)
 					{
-<<<<<<< HEAD
-						estar_set_speed(&estar,i,j,1.0);    
-=======
 						estar_set_speed(&estar,i,j,1.0);
->>>>>>> 998b91a787fa7e928cf9ee57a5eaff78c12983cb
 					}
 					else
 					{
@@ -84,11 +74,7 @@ namespace planner
 			ROS_INFO("REstar planner width = %d and height = %d.",width,height);
 			ROS_INFO("REstar planner %s is initialized successfully.",name.c_str());
 			ROS_INFO("estar.pq.len = %d.",estar.pq.len);
-<<<<<<< HEAD
-			initialized_ = true; 
-=======
 			initialized_ = true;
->>>>>>> 998b91a787fa7e928cf9ee57a5eaff78c12983cb
 		}
 		else
 		{	
@@ -101,18 +87,10 @@ namespace planner
 		                      const geometry_msgs::PoseStamped& goal, 
 		                      std::vector<geometry_msgs::PoseStamped>& plan)
 	{
-<<<<<<< HEAD
-
-		if(!initialized_)
-		{
-			ROS_ERROR("The planner has not been initialized, please call initialize() to use the planner.");
-=======
-		cout << "Inside MakePlan." << endl;
 
 		if(!initialized_)
 		{
 			ROS_ERROR("Thmakee planner has not been initialized, please call initialize() to use the planner.");
->>>>>>> 998b91a787fa7e928cf9ee57a5eaff78c12983cb
 			return false;
 		}
 		ROS_INFO("Got a start : %.2f, %.2f and a goal : %.2f, %.2f",start.pose.position.x,
@@ -147,10 +125,7 @@ namespace planner
 			estar_propagate(&estar);
 		}
 		
-<<<<<<< HEAD
 		/*This part of the code is obtained from gestar.c for tracing back from start to goal*/
-=======
->>>>>>> 998b91a787fa7e928cf9ee57a5eaff78c12983cb
 		size_t ii, jj;
 		double topkey, maxknown, maxoverall;
         	estar_cell_t * cell;
@@ -216,13 +191,8 @@ namespace planner
 				px = px + gx;
 				py = py + gy;
 			
-<<<<<<< HEAD
-				next.pose.position.x = px;
-				next.pose.position.y = py;
-=======
 				next.pose.position.x = px*resolution;
 				next.pose.position.y = py*resolution;
->>>>>>> 998b91a787fa7e928cf9ee57a5eaff78c12983cb
 				next.pose.position.z = 0.0;
 				
 				next.pose.orientation.x = 0.0;

@@ -83,23 +83,17 @@ namespace planner
 	{	
 		public:
 			ros::NodeHandle ROSNodeHandle;
-<<<<<<< HEAD
 			REstar(std::string name, costmap_2d::Costmap2DROS* costmap_ros);
 			REstar();
-=======
-			Estar(std::string name, costmap_2d::Costmap2DROS* costmap_ros);
-			Estar();
->>>>>>> 998b91a787fa7e928cf9ee57a5eaff78c12983cb
 			void initialize(std::string name, costmap_2d::Costmap2DROS* costmap_ros);
 			bool makePlan(const geometry_msgs::PoseStamped& start, 
 		                      const geometry_msgs::PoseStamped& goal, 
 		                      std::vector<geometry_msgs::PoseStamped>& plan);			    
-			//void estar_expose();
 <<<<<<< HEAD
-			~REstar();	
 =======
-			~Estar();	
+			//void estar_expose();
 >>>>>>> 998b91a787fa7e928cf9ee57a5eaff78c12983cb
+			~REstar();	
 
 
 			estar_t estar;
