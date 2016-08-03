@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*
 /* ROS-ESTAR.
  *
@@ -10,8 +9,6 @@
  *   Copyright (C) 2014 Roland Philippsen. All rights reserved.
  *   License (3-Clause BSD) : https://github.com/poftwaresatent/estar2
  * ***/
-=======
->>>>>>> 998b91a787fa7e928cf9ee57a5eaff78c12983cb
 #include <iostream>
 #include <cstdio>
 #include <stdlib.h>
@@ -23,11 +20,13 @@
 #include <netdb.h> 
 #include <cstring>
 #include <fstream>
+#include <vector>
 /** including ros libraries**********************/
 #include <ros/ros.h>
 #include <actionlib/client/simple_action_client.h>
 #include <move_base_msgs/MoveBaseAction.h>
 #include <geometry_msgs/Twist.h>
+#include <geometry_msgs/Point.h>
 #include <geometry_msgs/PoseStamped.h>
 #include <geometry_msgs/PoseWithCovarianceStamped.h>
 #include <move_base_msgs/MoveBaseGoal.h>
@@ -38,6 +37,7 @@
 #include <nav_msgs/OccupancyGrid.h>
 #include <nav_msgs/Path.h>
 #include <nav_msgs/GetPlan.h>
+//#include <dynamic_reconfigure_server.h>
 #include <tf/tf.h>
 #include <tf/transform_datatypes.h>
 #include <tf/transform_listener.h>
@@ -61,13 +61,21 @@
 #include"cell.h"
 #include"grid.h"
 #include"pqueue.h"
+#include"gradient_path.h"
+#include"expander.h"
+#include"grid_path.h"
+#include"orientation_filter.h"
+//#include"planner_core.h"
+#include"potential_calculator.h"
+#include"quadratic_calculator.h"
+#include"traceback.h"
 
 #include <cmath>
 
 #ifndef RESTAR_H
 #define RESTAR_H
 
-#define DIMX 50
+#define DIMX 50s
 #define DIMY 50
 #define ODIST 3
 #define GOALX 47

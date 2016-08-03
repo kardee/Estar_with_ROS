@@ -90,7 +90,7 @@ namespace planner
 
 		if(!initialized_)
 		{
-			ROS_ERROR("Thmakee planner has not been initialized, please call initialize() to use the planner.");
+			ROS_ERROR("The planner has not been initialized, please call initialize() to use the planner.");
 			return false;
 		}
 		ROS_INFO("Got a start : %.2f, %.2f and a goal : %.2f, %.2f",start.pose.position.x,
