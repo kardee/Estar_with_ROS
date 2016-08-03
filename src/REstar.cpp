@@ -56,6 +56,8 @@ namespace planner
 
 			estar_init(&estar,width,height);    // calling the initialize function from estar2 library
 			
+
+			//costmap values are given here which is casted
 			for(int i=0;i<width;++i)
 			{	
 				for(int j=0;j<height;++j)
